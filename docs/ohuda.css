@@ -1,0 +1,412 @@
+@charset "utf-8";
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #222222;
+  z-index: 9999999;
+  text-align:center;
+  color:#fff;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/*========= 画面遷移のためのCSS ===============*/
+
+body{
+    background:#222222;/*遷移アニメーションと同じ色を指定*/
+    
+}
+
+body.appear{
+    background:#000000;/*画面を開いた後の背景色を指定*/
+    margin:0;
+}
+
+/*画面遷移アニメーション*/
+.splashbg1,
+.splashbg2{
+    display: none;
+    
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear .splashbg1,
+body.appear .splashbg2{
+  display:block;
+}
+
+/*右に消えるエリア*/
+body.appear .splashbg1{
+  animation-name:PageAnime;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+  z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  left:50%;
+    transform: scaleX(1);
+    background-color: #222222;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime{
+  0% {
+    transform-origin:left;
+    transform:scaleX(1);
+  }
+  50% {
+    transform-origin:right;
+  }
+  100% {
+    transform-origin:right;
+    transform:scaleX(0);
+  }
+}
+
+/*左に消えるエリア*/
+body.appear .splashbg2{
+  animation-name:PageAnime2;
+  animation-duration:1.2s;
+  animation-timing-function:ease-in-out;
+  animation-fill-mode:forwards;
+    content: "";
+    position:fixed;
+  z-index: 999;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+  right:50%;
+    transform: scaleX(1);
+    background-color: #222222;/*伸びる背景色の設定*/
+}
+
+@keyframes PageAnime2{
+  0% {
+    transform-origin:right;
+    transform:scaleX(1);
+  }
+
+  50% {
+    transform-origin:left;
+  }
+  100% {
+    transform-origin:left;
+    transform:scaleX(0);
+  }
+}
+
+/*画面遷移の後現れるコンテンツ設定*/
+#container{
+  opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+  animation-name:PageAnimeAppear;
+  animation-duration:1s;
+  animation-delay:0.2s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
+
+
+
+/* glitch  */
+.flash {
+  animation: flash .03s infinite;
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .8;
+  }
+}
+.skew {
+  animation: skew 3s infinite;
+}
+@keyframes skew {
+  0% {
+    transform: none;
+  }
+  33% {
+    transform: none;
+  }
+  33.3% {
+    transform: skewX(30deg);
+  }
+  33.6% {
+    transform: skewX(-30deg);
+  }
+  33.9% {
+    transform: none;
+  }
+  66% {
+    transform: none;
+  }
+  66.3% {
+    transform: skewX(5deg);
+  }
+  66.6% {
+    transform: skewX(-5deg);
+  }
+  66.9% {
+    transform: none;
+  }
+  77% {
+    transform: none;
+  }
+  77.3% {
+    transform: skewX(15deg);
+  }
+  77.6% {
+    transform: skewX(-15deg);
+  }
+  77.9% {
+    transform: none;
+  }
+}
+
+
+
+.fuwafuwa {
+  animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+ 
+@keyframes fuwafuwa {
+  0% {
+    transform:translate(0, 0) rotate(-2.5deg);
+  }
+  50% {
+    transform:translate(10px, -5px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(2deg);
+  }
+}
+
+.fuwafuwa2 {
+  animation: fuwafuwa2 5s infinite ease-in-out .8s alternate;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+ 
+@keyframes fuwafuwa2 {
+  0% {
+    transform:translate(10px, -10px) rotate(1.5deg);
+  }
+  50% {
+    transform:translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform:translate(15px, 0) rotate(-2deg);
+  }
+}
+
+
+.fuwafuwa3 {
+  animation: fuwafuwa2 10s infinite ease-in-out .8s alternate;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+ 
+@keyframes fuwafuwa3 {
+  0% {
+    transform:translate(-2px, -2px) rotate(-0.1deg);
+  }
+  50% {
+    transform:translate(0, 0) rotate(0deg);
+  }
+  100% {
+    transform:translate(-2px, 0) rotate(0.05deg);
+  }
+}
+
+
+.fuwafuwa4 {
+  animation: fuwafuwa2 10s infinite ease-in-out 1s alternate;
+  transition: 2s ease-in-out;
+}
+ 
+@keyframes fuwafuwa4 {
+  10% {
+    transform:rotate(-0.1deg);
+  }
+  60% {
+    transform:rotate(0deg);
+  }
+  110% {
+    transform:rotate(0.05deg);
+  }
+}
+
+
+/*== 無限に波紋が広がる */
+
+.btnripple2{
+  /*波紋の基点とするためrelativeを指定*/
+position: relative;
+  /*波紋の形状*/
+display:inline-block;
+width:70px;
+height:70px;
+z-index: 2;
+border-radius: 50%;
+color:#ffffff;
+  outline: none;
+  /*アニメーションの設定*/
+  transition: all .5s;
+}
+
+
+
+/*波形を2つ設定*/
+.btnripple2::after,
+.btnripple2::before {
+  content: '';
+  /*絶対配置で波形の位置を決める*/
+  position: absolute;
+left:-180%;
+  top: 60%;
+  /*波形の形状*/
+  border: 2px solid #ffffff80;
+  width: 650%;
+  height: 650%;
+  border-radius: 50%;
+  /*はじめは不透明*/
+  opacity: 1;
+  /*ループするアニメーションの設定*/
+  animation:1s circleanime linear infinite;
+}
+
+/*波形の2つ目は0.5秒遅らせてアニメーション*/
+.btnripple2::before {
+  animation-delay:.5s; 
+}
+
+/*波形のアニメーション*/
+@keyframes circleanime{
+0%{
+  transform: scale(1.0);
+}
+100%{
+  transform: scale(1.5);
+  opacity: 0;
+}
+}
+
+/*========= レイアウトのためのCSS ===============*/
+
+h1{
+  font-size:1.2rem;
+}
+
+h2{
+  font-size:1.2rem;
+  text-align: center;
+  margin: 0 0 30px 0;
+}
+
+
+
+
+
+
+section:nth-child(2n){
+  background:#f3f3f3; 
+}
+
+
+
+.ohuda{
+  width: 200px;
+  position: absolute;
+  z-index: 3;
+  margin:0 auto;
+  left:40%;
+  top:6vh;
+  padding-top: 2%;
+
+transition: all 1.5s;
+   }
+   .ohuda:hover{
+    opacity:0.9;
+    transform:scale(1.08);
+   }
+
+
+   .ohuda_setumei {
+position:absolute;top:50vh; padding: 10px; margin-bottom: 10px;z-index:-10;left:2%;
+    width:30%;
+    font-size:0.5rem;
+    font-family: serif;
+    }
+    .ohuda_setumei_midasi {
+      font-family: serif;
+      position:absolute;top:50vh;
+      padding: 5px;
+      margin-bottom: 5px;
+      z-index:-10;left:1%;
+      font-size:1.2rem;
+      }
+          
+
+
+
+      
+      #menu ul{ 
+        position:absolute;
+        right:3%;
+        top:5%;
+        margin: 0; 
+        padding: 0; 
+        list-style: none; 
+        text-align: right;
+        }
+        #menu li{ 
+        padding: 1%; 
+        margin: 0; 
+        }
+        #menu li a{
+        display: block; 
+        font-family:serif;
+        border: 1px solid black;
+        padding: 6px 15px;
+        text-decoration: none;
+        color: #000000;
+        width: 200px; 
+        margin: 2px 0px;
+        text-align: left;
+        font-size: 18px;
+        }
+        #menu li a:hover{
+        border: 1px solid #ffffff86;
+        background-color: #ffffff4f;
+        }
+        
+

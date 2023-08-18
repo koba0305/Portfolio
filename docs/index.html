@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="PortforioKoba.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollTrigger/1.0.3/ScrollTrigger.min.js"></script>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>小林 優芽</title>
+</head>
+
+
+<body>
+  <div id="splash">
+    <div id="splash-logo"><img src="images/logo_name.png"style="width:100%;"></div>
+    <!--/splash-->
+  </div>
+
+
+
+    <header id="header">
+
+
+
+      <div class="center">
+        <button id="open-modal" name="open-modal-btn" style="cursor:pointer;">
+        
+        </button>
+      </div>
+
+
+      <div id="demo-modal" class="modal">
+        <div class="modal-content">
+
+          <span class='close'>X</span>
+          <div class="modal-body">
+
+
+            <p>『電脳神社』に御入り給へりまして、かたじけなくさうらふ。</p>
+            <br></br>
+            <p> 電脳神社は、電脳破裂の融合せる神聖なるかたなり。</p>
+            <p>我らは古の神仏の力を今の離散の天下に蘇らせ、皆様にご利益やりたてまつれり。</p>
+            <p>ここには、伝統と革新の融合せる独自の霊的なる見聞をさしいづ。</p>
+            <br></br>
+            <p>当神社には、神仏による効験が明らかに表れるお札授けたてまつれり。</p>
+            <p>電脳の天下に浸らむ麗しき企てのお札を見ることに、心身の浄化や幸福の流れ感じ取るべし。</p>
+            <p>それぞれの御札は、古の知恵と今のわざの融合せる奇しき力を宿しており、ご利益の実感はまさに驚くべきものなり。</p>
+            <br></br>
+            <p>我らの信念は、きしかたとゆくすゑ、うつつと仮想の架け橋を築くことなり。</p>
+            <p>電脳神社は、古の神聖なる力と最先端のわざの交差するかたに、きみの心深く響かす。</p>
+            <p>我らの使命は、この離散の世におくとも、神仏の力をわたりにやり続くることなり。</p>
+            <br></br>
+            <p>いで、電脳神社の扉開け、電脳の奥深き天下への旅にいでむ。</p>
+            <p>神聖なる護符通じ、きみの世に不思議もたらし、内なる光を輝かせむ。</p>
+            <p>信仰心持ち、ご利益受け取りつつ、ゆくすゑへのあらましごとと豊かさを手に入れむ。</p>
+            <br></br>
+            <br></br>
+            <p>※ご利益に関せば私の信仰心によるものに、しるしには私差あり。</p>
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+
+
+    <style>
+      model-viewer {
+        width: 1000px;
+        height: 600px;
+       /* background-color: #CC99CC;
+       ここレスポンシブ必須ですね*/
+      }
+      model-viewer#reveal {
+          --poster-color: transparent;
+      }
+      </style>
+      <!-- コンポーネントをCDNで読み込む -->
+      <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+      <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
+      
+      <!-- 3Dモデルを読み込む。
+      "exposure"は露出の制御、明るさが変わる。
+      "auto-rotate"は自動的に回転表示。-->
+      <model-viewer id="reveal" loading="eager" camera-controls disable-zoom auto-rotate auto-rotate-delay="1500" poster="images/logo_name.png" src="donut.gltf"  exposure="0.6" alt="name"></model-viewer>
+      
+
+    <main>
+   <br></br>
+      <p data-trigger="" class="fadeInLeft">電脳神社御札</p>
+      <div class="main1">
+        <div class="onclick">
+          <div class="ohuda1">
+            <div style="position: relative; z-index: 7;"><img src="images/ohuda1_blue.png">
+              <div style="position:absolute;left:0.5vw;top:0vw;z-index:8;">
+                <div data-trigger="" class="fuwafuwa"><a href="index_ohuda1.html"target="_ohuda"> <img src="images/ohuda1_red.png"> </a>
+                </div>
+              </div>
+            </div>
+            
+
+
+          <!--  <ここから無病> -->
+        </div>
+        </br>
+        <div class="onclick">
+          <div class="ohuda1">
+            <div style="position: relative; z-index: 5; padding-left: 10%;"><img src="images/mubyousokusai2.png"
+                width=70% >
+              <div style="position: absolute; left: 0%;top: 3vw;z-index: 6;">
+                <div class="skew">
+                  <div class="keyframe2 animation"><a href="index_ohuda2.html" target="_ohuda"alt="無病息災"> <img
+                        src="images/mubyousokusai1.png"> </a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+          <!--  <ここから学業> -->
+
+          <br></br>
+          <div class="onclick">
+            <div class="ohuda1">
+            <div style="position: relative; z-index: 5; padding-left: 13%;padding-top: 2%;"><img
+                src="images/gakugyouzyouzyu1.png" width=65%>
+              <div style="position: absolute; left: 0%;top: -10vh;z-index: 6;">
+                <div class="flash"><a href="index_ohuda3.html" target="_ohuda"alt="電脳神社"> <img src="images/gakugyouzyouzyu3.png"> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <br></br>
+
+          <!--  <ここから厄除> -->
+          <div class="onclick">
+            <div class="ohuda1">
+            <div style="position: relative; z-index: 5; padding-top: 2%;"><a href="index_ohuda4.html"target="_ohuda" alt="電脳神社"> <img
+                  src="images/yakuyoke1.png"> </a> </div>
+
+
+                  <div class="ohuda1-1" style="right:15%;top:87%;pointer-events: none;">
+           
+        </div>
+
+          <!--  <ここから商売> -->
+        <div class="onclick">
+          <div class="ohuda1">
+          <div style="position: relative; z-index: 5; padding-top: 2%;">
+           <a href="index_ohuda5.html" target="_ohuda"alt="電脳神社"> <div class="skew"></div><img src="images/syoubaihannzyou1.png" width="70%">
+              </a> </div>
+    
+                  
+              <div class="ohuda1-1" style="right:9%;top:108%;pointer-events: none;">
+                
+              
+
+            
+              </div>
+          </div>
+        </div>
+        <br></br>
+        <!--/main-->
+    </main>
+    <!--/main1-->
+  </div>
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="js/paint.js"></script>
+
+
+</body>
+
+</html>

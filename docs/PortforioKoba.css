@@ -1,0 +1,341 @@
+@charset "utf-8";
+
+/*========= ローディング画面のためのCSS ===============*/
+#splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 9999999;
+  text-align:center;
+    top: 0;
+  left: 0;
+}
+
+#splash-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+#particles-js{
+  position: sticky;
+}
+
+
+/*画面遷移の後現れるコンテンツ設定*/
+
+#container{
+  opacity: 0;/*はじめは透過0に*/
+}
+
+/*bodyにappearクラスがついたら出現*/
+body.appear #container{
+  animation-name:PageAnimeAppear;
+  animation-duration:1s;
+  animation-delay: 0.8s;
+  animation-fill-mode:forwards;
+  opacity: 0;
+}
+
+@keyframes PageAnimeAppear{
+  0% {
+  opacity: 0;
+  }
+  100% {
+  opacity: 1;
+}
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  animation-name: show;
+  animation-duration: 0.5s
+}
+
+.modal-content {
+  position: center;
+  margin: 10% auto;
+  border: 1px solid #ff000074;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+@keyframes show {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+
+
+.modal-body {
+  padding: 80px;
+  font-family: serif;
+  line-height:20px;
+  font-size: 1.3vw;
+  line-height: 1;
+  background: black;
+  margin: 0 auto;
+  border-top: 0.1px solid #0dff00fe ;
+  border-bottom: 0.1px solid #0dff00fe ;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+
+
+.close {
+  color: #ff000087;
+  float: right;
+  font-size: 20px;
+  padding-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: rgb(182, 0, 0);
+  cursor: pointer;
+}
+button {
+
+  border: none;
+  background: transparent;
+  
+}
+
+
+
+
+
+h1 { font-size: 5em; }
+
+@keyframes textflicker {
+  from {
+    text-shadow: 1px 0 0 #ea3636, -2px 0 0 #75fa69;
+  }
+  to {
+    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
+  }
+}
+ 
+ 
+
+
+
+
+
+.fuwafuwa {
+  animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
+  display: inline-block;
+  transition: 1.5s ease-in-out;
+}
+ 
+@keyframes fuwafuwa {
+  0% {
+    transform:translate(0, 0) rotate(-1.5deg);
+  }
+  50% {
+    transform:translate(3px, -3px) rotate(0deg);
+  }
+  100% {
+    transform:translate(0, 0) rotate(1deg);
+  }
+}
+
+
+
+
+/* glitch  */
+.flash {
+  animation: flash .03s infinite;
+}
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: .8;
+  }
+}
+.skew {
+  animation: skew 3s infinite;
+}
+@keyframes skew {
+  0% {
+    transform: none;
+  }
+  33% {
+    transform: none;
+  }
+  33.3% {
+    transform: skewX(30deg);
+  }
+  33.6% {
+    transform: skewX(-30deg);
+  }
+  33.9% {
+    transform: none;
+  }
+  66% {
+    transform: none;
+  }
+  66.3% {
+    transform: skewX(5deg);
+  }
+  66.6% {
+    transform: skewX(-5deg);
+  }
+  66.9% {
+    transform: none;
+  }
+  77% {
+    transform: none;
+  }
+  77.3% {
+    transform: skewX(15deg);
+  }
+  77.6% {
+    transform: skewX(-15deg);
+  }
+  77.9% {
+    transform: none;
+  }
+}
+
+ /*=========　フォントたち ===============*/
+
+.logo_font
+{
+  position: absolute;
+ width:50vw;
+ margin: 0auto;
+}
+ /*========= レイアウトのためのCSS ===============*/
+
+
+
+h1{
+  font-size:1.2rem;
+}
+
+h2{
+  font-size:5rem;
+  z-index: 3;
+  cursor: pointer;
+  margin: 0 0 30px 0;
+  position: relative;
+}
+
+p{
+  z-index: 4;
+  position:relative;
+}
+
+main{
+  padding-top:200px;
+  margin-left:10%;
+  margin-right:10%;
+  margin-bottom:0%;
+  padding:10%;
+  background-image: url(saibahaikei.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+
+.ohuda{
+  
+  width: 50px;
+  z-index: 3;
+
+   }
+
+#header{
+  padding:20px;
+  color:#000000;
+}
+
+body{
+
+  color:#000000;
+  font-family: serif;
+
+}
+section:nth-child(2n){
+  background:#000000; 
+}
+
+#footer{
+  background:#ff0000ba;
+  padding-top:5px;
+}
+
+.soroeru{
+  position:absolute;
+}
+.soroeru2{
+
+  position:relative;
+}
+.center{
+  text-align:center;
+}
+.ueyazirusi{
+  position:absolute;
+  top:10%;
+  right: 15%;
+}
+.okazariyou{
+  width: 100vw;
+position:absolute;
+height: auto;
+}
+.onclick{
+  cursor:pointer;
+}
+h4{
+  color:rgb(255, 148, 148);
+  font-size:1.5rem;
+  position:absolute;
+
+  top:229%;
+  left:40%;
+}
+
+
+
+
+
+  /* 左から右にふわっとフェードイン */
+.fadeInLeft.visible {
+  animation: fadeInLeft 0.7s ease 0s 1 normal;
+}
+/* fadeInLeft */
+@keyframes fadeInLeft {
+0% {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+100% {
+  opacity: 1;
+}
+}
