@@ -51,3 +51,11 @@ window.onclick = function(event) {
 
 const trigger = new ScrollTrigger.default()
 trigger.add('[data-trigger]')
+
+
+
+
+
+
+//背景
+

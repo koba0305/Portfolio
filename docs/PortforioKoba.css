@@ -250,15 +250,6 @@ p{
 }
 
 main{
-  padding-top:200px;
-  margin-left:10%;
-  margin-right:10%;
-  margin-bottom:0%;
-  padding:10%;
-  background-image: url(saibahaikei.png);
-  background-size: contain;
-  background-repeat: no-repeat;
-  z-index: 0;
 }
 
 
@@ -269,16 +260,36 @@ main{
 
    }
 
-#header{
-  padding:20px;
-  color:#000000;
+
+
+.menu{
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  flex-direction: column;
+  padding: 0px;
+  z-index: 5;
+}
+.menu_nakami{
+  width: 50px;
+  height:60vh;
+  border-bottom: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
+  background-color: #000000;
+  color: #ffffff;
+}
+.menu_nakami1{
+  width: 50px;
+  height:40vh;
+  border-right: 1px solid #ffffff;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 body{
-
-  color:#000000;
+  background-color:#000000;
   font-family: serif;
-
+  margin:0;
 }
 section:nth-child(2n){
   background:#000000; 
@@ -286,7 +297,7 @@ section:nth-child(2n){
 
 #footer{
   background:#ff0000ba;
-  padding-top:5px;
+
 }
 
 .soroeru{
