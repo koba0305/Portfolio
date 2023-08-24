@@ -16,21 +16,25 @@
 <body>
 
   <div id="splash">
-    <div id="splash-logo"><img src="images/logo_name.png"style="width:100%;"></div>
+    <div id="splash-logo"><img src="images/logo_name.png"style="width:400px;"></div>
     <!--/splash-->
   </div>
 
+  <div id="particles-js"></div>
+
+
   <div class="menu">
     <div class="menu_nakami">
-      menu
+      MENU
   </div>
   <div class="menu_nakami1">audio
   </div>
   </div>
 
 
-  <div class="finisher-header" style=" filter: blur(10px);width: 100vw; height: 100vh;z-index: -5;position:absolute; top:0;">
-  </div>
+  <!-- <div class="finisher-header" style=" filter: blur(10px)saturate(250%)brightness(50%);width: 100vw; height: 100vh;z-index: -5;position:absolute; top:0;">
+  </div> -->
+
     <header id="header">
 
 
@@ -78,21 +82,6 @@
 
 
 
-    <style>
-      model-viewer {
-        width: 80vw;
-        height: 600px;
-        z-index: -3;
-       /* background-color: #CC99CC;
-       ここレスポンシブ必須ですね*/
-       position:absolute;
-       top:5%;
-       left:0;
-      }
-      model-viewer#reveal {
-          --poster-color: transparent;
-      }
-      </style>
       <!-- コンポーネントをCDNで読み込む -->
       <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
       <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
@@ -100,8 +89,26 @@
       <!-- 3Dモデルを読み込む。
       "exposure"は露出の制御、明るさが変わる。
       "auto-rotate"は自動的に回転表示。-->
-      <model-viewer id="reveal" loading="eager" camera-controls disable-zoom auto-rotate auto-rotate-delay="2500" poster="images/logo_name.png" src="donut.gltf"  exposure="0.6" alt="name"></model-viewer>
-      
+      <model-viewer id="reveal" loading="eager"  disable-zoom auto-rotate auto-rotate-delay="2500" camera-controls poster="images/logo_name.png" src="donut.gltf"  exposure="0.6" alt="name"></model-viewer>
+      <div class="touka_01">
+      <img src="images/portforio_norenn.gif" alt="暖簾背景" style="width:100%;">
+      </div>
+      <div class="touka_01_2">    </div>
+      <div class="touka_01_1">
+      <div class="touka_02">
+        <p>Kobayashi Yume
+        </p>
+      </div>
+      <div class="touka_02_1">
+        <p>Portforio
+          <br><br>Hello, I am Yume Kobayashi,
+          <br>a student at Tokyo Metropolitan University
+          <br>specializing in 3D modeling and media art.
+          <br>I am committed to creating "new things"
+          <br>that surprise and inspire people.
+        </p>
+      </div>
+    </div>
 
     <main>
    <br></br>
@@ -116,24 +123,6 @@
               </div>
             </div>
             
-
-
-          <!--  <ここから無病> -->
-        </div>
-        </br>
-        <div class="onclick">
-          <div class="ohuda1">
-            <div style="position: relative; z-index: 5; padding-left: 10%;"><img src="images/mubyousokusai2.png"
-                width=70% >
-              <div style="position: absolute; left: 0%;top: 3vw;z-index: 6;">
-                <div class="skew">
-                  <div class="keyframe2 animation"><a href="index_ohuda2.html" target="_ohuda"alt="無病息災"> <img
-                        src="images/mubyousokusai1.png"> </a></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
 
 
           <!--  <ここから学業> -->
@@ -182,6 +171,7 @@
         </div>
  
         <br></br>
+
         <!--/main-->
     </main>
     <!--/main1-->
@@ -199,46 +189,8 @@
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="js/paint.js"></script>
  
-  <script type="text/javascript">
-    new FinisherHeader({
-      "count": 35,
-      "size": {
-        "min": 100,
-        "max": 600,
-        "pulse": 0.1
-      },
-      "speed": {
-        "x": {
-          "min": 0,
-          "max": 0.2
-        },
-        "y": {
-          "min": 0,
-          "max": 0.4
-        }
-      },
-      "colors": {
-        "background": "#021863",
-        "particles": [
-          "#ffffff",
-          "#87ddfe",
-          "#001db2",
-          "#fc7bfc",
-          "#008878"
-        ]
-      },
-      "blending": "overlay",
-      "opacity": {
-        "center": 0.4,
-        "edge": 0.4
-      },
-      "skew": 0,
-      "shapes": [
-        "c"
-      ]
-    });
-    </script>
-
-</body>
-
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script></body>
+<script>particlesJS("particles-js", {"particles":{"number":{"value":194,"density":{"enable":true,"value_area":789.1476416322727}},"color":{"value":"#fff"},"shape":{"type":"circle","stroke":{"width":0,"color":"#ffffff"},"polygon":{"nb_sides":3},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":1,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":3,"random":true,"anim":{"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":{"enable":false,"distance":500,"color":"#ffffff","opacity":0.8,"width":2},"move":{"enable":true,"speed":3,"direction":"bottom","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"bubble"},"onclick":{"enable":false,"mode":"repulse"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":0.5}},"bubble":{"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});var count_particles, stats, update; stats = new Stats; stats.setMode(0); stats.domElement.style.position = 'absolute'; stats.domElement.style.left = '0px'; stats.domElement.style.top = '0px'; document.body.appendChild(stats.domElement); count_particles = document.querySelector('.js-count-particles'); update = function() { stats.begin(); stats.end(); if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; } requestAnimationFrame(update); }; requestAnimationFrame(update);;
+// jsファイルだとこいつ動かない、なぜ
+</script>
 </html>

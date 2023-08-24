@@ -56,6 +56,3 @@ trigger.add('[data-trigger]')
 
 
 
-
-//背景
-

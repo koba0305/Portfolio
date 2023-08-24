@@ -20,11 +20,6 @@
 }
 
 
-#particles-js{
-  position: sticky;
-}
-
-
 /*画面遷移の後現れるコンテンツ設定*/
 
 #container{
@@ -137,6 +132,22 @@ h1 { font-size: 5em; }
 }
  
  
+
+
+
+model-viewer {
+  width: 70vw;
+  height: 600px;
+  z-index: 3;
+ /* background-color: #CC99CC;
+ ここレスポンシブ必須ですね*/
+ position:absolute;
+ top:5%;
+ left:16%;
+}
+model-viewer#reveal {
+    --poster-color: transparent;
+}
 
 
 
@@ -268,15 +279,19 @@ main{
   top: 0;
   flex-direction: column;
   padding: 0px;
-  z-index: 5;
+  z-index: 3;
 }
 .menu_nakami{
-  width: 50px;
   height:60vh;
   border-bottom: 1px solid #ffffff;
   border-right: 1px solid #ffffff;
   background-color: #000000;
   color: #ffffff;
+  font-size: 17px;
+  writing-mode: vertical-rl;
+  text-align: center;
+  padding:15px;
+  font-family:Arial, Helvetica, sans-serif;
 }
 .menu_nakami1{
   width: 50px;
@@ -284,7 +299,105 @@ main{
   border-right: 1px solid #ffffff;
   background-color: #000000;
   color: #ffffff;
+  font-family:Arial, Helvetica, sans-serif;
 }
+.touka_01{
+  width: 100vw;
+  height:100%;
+position: absolute;
+top:0;
+left:0;
+z-index: -4;
+pointer-events:none;
+}
+.touka_01_1{
+  width: 30vw;
+  height:100%;
+position: absolute;
+top:0;
+right:0;
+z-index: 4;
+pointer-events:none;
+}
+/* .touka_01_2{
+  width: 30vw;
+  height:100%;
+position: absolute;
+background-color: #000000;
+opacity: 0.5;
+top:0;
+right:0;
+z-index: 1;
+pointer-events:none;
+} */
+.touka_02{
+  height:100%;
+position: absolute;
+top:55%;left:4vw;
+font-family: Helvetica, sans-serif;
+font-size: 17px;
+z-index: 5;
+color:white;
+}
+.touka_02_1{
+  height:100%;
+position: absolute;
+top:60.5%;left:4vw;
+font-family: Helvetica, sans-serif;
+font-size: 13px;
+z-index: 5;
+color:white;
+line-height:200%;
+
+}
+
+@media screen and (max-width: 960px) {
+  model-viewer {
+    width: 70vw;
+    height: 500px;
+    z-index: 3;
+   /* background-color: #CC99CC;
+   ここレスポンシブ必須ですね*/
+   position:absolute;
+   top:0;
+   left:16%;
+  }
+  model-viewer#reveal {
+      --poster-color: transparent;
+  }
+  .touka_01{
+    width: 100vw;
+    height:100%;
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: -4;
+  pointer-events:none;
+  }
+  .touka_01_2{
+    background-color: none;
+    opacity: 0;
+  }
+.touka_02{
+  height:100%;
+position: absolute;
+top:55%;left:4vw;
+font-family: Helvetica, sans-serif;
+font-size: 2vw;
+z-index: 5;
+color:white;
+}
+.touka_02_1{
+  height:100%;
+position: absolute;
+top:60.5%;left:4vw;
+font-family: Helvetica, sans-serif;
+font-size: 1.3vw;
+z-index: 5;
+color:white;
+line-height:200%;
+
+}}
 
 body{
   background-color:#000000;
@@ -300,26 +413,7 @@ section:nth-child(2n){
 
 }
 
-.soroeru{
-  position:absolute;
-}
-.soroeru2{
 
-  position:relative;
-}
-.center{
-  text-align:center;
-}
-.ueyazirusi{
-  position:absolute;
-  top:10%;
-  right: 15%;
-}
-.okazariyou{
-  width: 100vw;
-position:absolute;
-height: auto;
-}
 .onclick{
   cursor:pointer;
 }
@@ -327,9 +421,7 @@ h4{
   color:rgb(255, 148, 148);
   font-size:1.5rem;
   position:absolute;
-
-  top:229%;
-  left:40%;
+  top:229%;left:40%;
 }
 
 
@@ -350,3 +442,18 @@ h4{
   opacity: 1;
 }
 }
+
+
+
+
+/* ---- particles.js container ---- */
+ #particles-js{ 
+  position:absolute;
+   width: 100%; height: 120%; 
+   background-image: url(""); 
+   background-repeat: no-repeat; 
+   background-size: cover; 
+   background-position: 50% 50%; 
+   z-index: 2;
+  }
+
