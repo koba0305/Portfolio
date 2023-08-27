@@ -280,6 +280,7 @@ main{
   flex-direction: column;
   padding: 0px;
   z-index: 3;
+  height:100vh;
 }
 .menu_nakami{
   height:60vh;
@@ -354,13 +355,11 @@ text-shadow: 1px 2px 2px #000000;
 .pc { display: block !important; }
 .sp { display: none !important; }
  
-/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
-@media only screen and (max-width: 750px) {
-    .pc { display: none !important; }
-    .sp { display: block !important; }
-}
 
-@media screen and (max-width: 960px) {
+/* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
+
+@media screen and (max-width: 750px) {
+
   model-viewer {
     width: 70vw;
     height: 500px;
@@ -373,6 +372,19 @@ text-shadow: 1px 2px 2px #000000;
   model-viewer#reveal {
       --poster-color: transparent;
   }
+
+
+}
+
+@media screen and (max-width: 960px) {
+  .pc { display: none !important; }
+  .sp { display: block !important; }
+  .menu_nakami{display:none !important;
+  }
+  .menu_nakami1{display:none !important;
+  }
+
+
   .touka_01{
     width: 100vw;
     height:100%;
