@@ -47,12 +47,11 @@ body.appear #container{
 .modal {
   display: none;
   position: fixed;
-  top: 0;
+  top: 0px;
   right: 0;
   bottom: 0;
-  left: 0;
+  left:5vw;
   overflow: auto;
-  background: rgba(0, 0, 0, 0.8);
   z-index: 99999;
   animation-name: show;
   animation-duration: 0.5s
@@ -60,10 +59,15 @@ body.appear #container{
 
 .modal-content {
   position: center;
-  margin: 10% auto;
-  border: 1px solid #ff000074;
-  width: 90%;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #ffffff;
+  border-left: 1px solid #ffffff;
+  background: rgba(0, 0, 0);
+  width: 95vw;
+  height: 25%;
+  padding:0;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  /* こいつレスポンシブ必須 */
 }
 
 @keyframes show {
@@ -80,33 +84,35 @@ body.appear #container{
 
 
 .modal-body {
-  padding: 80px;
-  font-family: serif;
-  line-height:20px;
-  font-size: 1.3vw;
-  line-height: 1;
+  padding-top: 0;
+  top:0;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-left: 5%;
+margin:0;
+  font-size: 12vh;
+  line-height: 0;
   background: black;
-  margin: 0 auto;
-  border-top: 0.1px solid #0dff00fe ;
-  border-bottom: 0.1px solid #0dff00fe ;
-  animation-duration: 0.01s;
-  animation-name: textflicker;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  color:white;
 }
 
 
 
 .close {
-  color: #ff000087;
+  color: #ffffff;
   float: right;
-  font-size: 20px;
-  padding-right: 10px;
+  font-size: 10vh;
+  top:0;
+  height:25vh;
+  width:25vh;
+  right:0;
+  position: absolute;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  border-left: 1px solid #ffffff;
 }
 
 .close:hover,
 .close:focus {
-  color: rgb(182, 0, 0);
+  color: rgba(255, 255, 255, 0.724);
   cursor: pointer;
 }
 button {
@@ -122,15 +128,6 @@ button {
 
 h1 { font-size: 5em; }
 
-@keyframes textflicker {
-  from {
-    text-shadow: 1px 0 0 #ea3636, -2px 0 0 #75fa69;
-  }
-  to {
-    text-shadow: 2px 0.5px 2px #ea36af, -1px -0.5px 2px #75fa69;
-  }
-}
- 
  
 
 
@@ -265,10 +262,8 @@ main{
 
 
 .ohuda{
-  
-  width: 50px;
+  width: 5vw;
   z-index: 3;
-
    }
 
 
@@ -278,29 +273,42 @@ main{
   position: -webkit-sticky;
   top: 0;
   flex-direction: column;
-  padding: 0px;
+  padding: 0;
   z-index: 3;
   height:100vh;
+  width:5vw;
 }
+
 .menu_nakami{
   height:60vh;
-  border-bottom: 1px solid #ffffff;
-  border-right: 1px solid #ffffff;
   background-color: #000000;
   color: #ffffff;
   font-size: 17px;
   writing-mode: vertical-rl;
   text-align: center;
-  padding:15px;
+  padding:0;
   font-family:Arial, Helvetica, sans-serif;
+  position:absolute;
+  top:0;
+  padding:5px;
+  border-right: 1px solid #ffffff;
+  width:5vw;
+  right:0;
+  padding-right: 2vw;
 }
 .menu_nakami1{
-  width: 50px;
+  width: 5vw;
   height:40vh;
-  border-right: 1px solid #ffffff;
+  top:60vh;
   background-color: #000000;
   color: #ffffff;
   font-family:Arial, Helvetica, sans-serif;
+  position:absolute;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+}
+.modal-midasi{
+  padding:50%;
 }
 .touka_01{
   width: 100vw;
@@ -339,7 +347,7 @@ font-family: Helvetica, sans-serif;
 font-size: 17px;
 z-index: 5;
 color:white;
-text-shadow: 1px 2px 2px #000000;
+text-shadow: 1px 1px 1px #000000;
 }
 .touka_02_1{
   height:100%;
@@ -350,7 +358,7 @@ font-size: 13px;
 z-index: 5;
 color:white;
 line-height:200%;
-text-shadow: 1px 2px 2px #000000;
+text-shadow: 1px 1px 1px #000000;
 }
 .pc { display: block !important; }
 .sp { display: none !important; }
