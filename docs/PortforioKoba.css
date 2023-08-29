@@ -43,7 +43,14 @@ body.appear #container{
   opacity: 1;
 }
 }
+.me{
+z-index: 7;
+position:relative;
+width:5%;
+left:10%;
+top:0;
 
+}
 .modal {
   display: none;
   position: fixed;
@@ -148,7 +155,9 @@ model-viewer#reveal {
 
 
 
-
+.ohuda1{
+  left:70px;
+}
 
 .fuwafuwa {
   animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
