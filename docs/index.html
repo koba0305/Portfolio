@@ -16,7 +16,9 @@
 <body>
 
   <div id="splash">
-    <div id="splash-logo"><img src="images/logo_name.png"style="width:400px;"></div>
+    <div id="splash-logo"><img src="images/logo_name.png"style="width:400px;">
+    <!-- これここにループしない動画を置いたらいいんじゃないか？この画像ポスターにして、再生開始はonloadでうまくいけんじゃね？ -->
+    </div>
     <!--/splash-->
   </div>
 
@@ -34,6 +36,8 @@
   <div class="menu_nakami1"style="cursor:pointer;z-index: 12;">audio
   </div>
 
+  <div class="menu_nakami2"style="cursor:pointer;z-index: 12;">color
+  </div>
   </div>
 
 
@@ -86,10 +90,14 @@
       "exposure"は露出の制御、明るさが変わる。
       "auto-rotate"は自動的に回転表示。-->
       <model-viewer id="reveal" loading="eager"  disable-zoom auto-rotate auto-rotate-delay="2500" camera-controls autoplay camera-target="0 0 0" poster="images/logo_name.png" src="mylogo.gltf" camera-orbit = "0deg 90deg 90%" exposure="0.7" alt="name"></model-viewer>
-      <div class="touka_01">
-      <video class="sp" autoplay loop src="images/portforio_norenn.mp4" alt="背景" style="width:100%;"></video>
+      
+      <div class="touka_01" style="    position:fixed;">
+   <video class="sp"  autoplay loop src="images/portforio_norenn.mp4" alt="背景" style="width:100%;"></video>
       <video class="pc" autoplay loop src="images/portforio_norenn_big1.mp4" alt="背景" style="width:100%;"></video>
-      </div>
+ 
+    
+    </div>
+
       <div class="touka_01_2">    </div>
       <div class="touka_01_1">
       <div class="touka_02">
@@ -117,12 +125,10 @@
           <div class="onclick">
             <div class="ohuda1">
 
-            <div style="position: relative; z-index: 5; padding-left: 13%;padding-top: 2%;"><img
-                src="images/gakugyouzyouzyu1.png" width=65%>
-              <div style="position: absolute; left: 0%;top: -10vh;z-index: 6;">
-                <div class="flash"><a href="index_ohuda3.html"  alt="電脳神社"> <img src="images/gakugyouzyouzyu3.png"> </a>
+
+                <div  class="syasenn1">
+                
                 </div>
-              </div>
             </div>
           </div>
 
@@ -133,7 +139,7 @@
         <div class="onclick">
           <div class="ohuda1">
             <div class="me">
-                <div class="fuwafuwa"><a href="index_ohuda1.html"> <img src="images/ME.png" style="height:30vh;" data-trigger=""class="fadeInLeft" > </a>
+                <div class="fuwafuwa"><a href="index_ohuda1.html"> <img src="images/ME.png" style="width:100%;" data-trigger=""class="fadeInLeft" > </a>
             
               </div>
             </div>
@@ -148,7 +154,7 @@
           <!--  <ここから厄除> -->
           <div class="onclick">
             <div class="ohuda1">
-            <div style="position: relative; z-index: 5; padding-top: 2%;"><a href="index_ohuda4.html"  alt="電脳神社"> <img
+            <div style="position: absolute; z-index: 5; padding-top: 2%; top:210%"><a href="index_ohuda4.html"  alt="電脳神社"> <img
                   src="images/yakuyoke1.png"> </a> </div>
 
 
@@ -159,7 +165,7 @@
           <!--  <ここから商売> -->
         <div class="onclick">
           <div class="ohuda1">
-          <div style="position: relative; z-index: 5; padding-top: 2%;">
+          <div style="position: absolute; z-index: 5; padding-top: 2%; top:250%">
            <a href="index_ohuda5.html"  alt="電脳神社"> <div class="skew"></div><img src="images/syoubaihannzyou1.png" width="70%">
               </a> </div>
     

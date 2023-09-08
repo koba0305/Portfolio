@@ -43,14 +43,7 @@ body.appear #container{
   opacity: 1;
 }
 }
-.me{
-z-index: 7;
-position:relative;
-width:5%;
-left:10%;
-top:0;
 
-}
 .modal {
   display: none;
   position: fixed;
@@ -156,7 +149,8 @@ model-viewer#reveal {
 
 
 .ohuda1{
-  left:70px;
+
+
 }
 
 .fuwafuwa {
@@ -278,7 +272,7 @@ main{
 
 
 .menu{
-  position: sticky;
+  position: fixed;
   position: -webkit-sticky;
   top: 0;
   flex-direction: column;
@@ -289,7 +283,7 @@ main{
 }
 
 .menu_nakami{
-  height:60vh;
+  height:55vh;
   background-color: #000000;
   color: #ffffff;
   font-size: 17px;
@@ -306,9 +300,22 @@ main{
   padding-right: 2vw;
 }
 .menu_nakami1{
+  right:0;
   width: 5vw;
-  height:40vh;
-  top:60vh;
+  height:25vh;
+  top:55vh;
+  background-color: #000000;
+  color: #ffffff;
+  font-family:Arial, Helvetica, sans-serif;
+  position:absolute;
+  border-right: 1px solid #ffffff;
+  border-top: 1px solid #ffffff;
+}
+.menu_nakami2{
+  right:0;
+  width: 5vw;
+  height:20vh;
+  top:80vh;
   background-color: #000000;
   color: #ffffff;
   font-family:Arial, Helvetica, sans-serif;
@@ -392,21 +399,37 @@ text-shadow: 1px 1px 1px #000000;
   }
 
 
+  .pc { display: none !important; }
+  .sp { display: block !important; 
+    object-fit: cover!important;
+    object-position: 0 0!important;
+   width:100vw;
+}
 }
 
+
 @media screen and (max-width: 960px) {
-  .pc { display: none !important; }
-  .sp { display: block !important; }
+  .pc { display: block !important; 
+    object-fit: cover;
+    object-position: 50% 100%;
+    height:100%;
+   }
+   .sp { display: none!important; 
+
+}
+
+
   .menu_nakami{display:none !important;
   }
   .menu_nakami1{display:none !important;
   }
 
-
+  .menu_nakami2{display:none !important;
+  }
   .touka_01{
     width: 100vw;
     height:100%;
-  position: absolute;
+
   top:0;
   left:0;
   z-index: -4;
@@ -443,7 +466,10 @@ line-height:200%;
    background-size: cover; 
    background-position: 50% 50%; 
    z-index: 2;
-  }}
+  }
+
+
+}
 
 body{
   background-color:#000000;
@@ -476,7 +502,7 @@ h4{
 
   /* 左から右にふわっとフェードイン */
 .fadeInLeft.visible {
-  animation: fadeInLeft 0.7s ease 0s 1 normal;
+  animation: fadeInLeft 0.9s ease 0s 1 normal;
 }
 /* fadeInLeft */
 @keyframes fadeInLeft {
@@ -503,6 +529,24 @@ h4{
    background-repeat: no-repeat; 
    background-size: cover; 
    background-position: 50% 50%; 
-   z-index: 2;
+   z-index: -3;
   }
 
+
+
+.syasenn1{
+  position: absolute;  
+  z-index: 2;border: 1px solid #333333; background-color: #ffff99;top:140%;
+  height:100px;
+  width:95vw;
+  left:5vw;
+  right:0;
+}
+  .me{
+    z-index: 7;
+    position:absolute;
+    width:25vw;
+    left:15%;
+    top:150%;
+    
+    }
