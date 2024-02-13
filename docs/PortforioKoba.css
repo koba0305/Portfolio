@@ -148,11 +148,6 @@ model-viewer#reveal {
 
 
 
-.ohuda1{
-
-
-}
-
 .fuwafuwa {
   animation: fuwafuwa 3s infinite ease-in-out .8s alternate;
   display: inline-block;
@@ -270,96 +265,50 @@ main{
    }
 
 
+   .menu{
+    height:15vh;
+    width:100vw;
+    font-size: 17px;
 
-.menu{
-  position: fixed;
-  position: -webkit-sticky;
-  top: 0;
-  flex-direction: column;
-  padding: 0;
-  z-index: 3;
-  height:100vh;
-  width:5vw;
-}
-
+    padding:0;
+    font-family:Arial, Helvetica, sans-serif;
+    position:absolute;
+    top:7vh;
+    z-index: 2;
+   }
 .menu_nakami{
-  height:55vh;
-  background-color: #000000;
-  color: #ffffff;
-  font-size: 17px;
-  writing-mode: vertical-rl;
-  text-align: center;
-  padding:0;
-  font-family:Arial, Helvetica, sans-serif;
+  color: black;
   position:absolute;
-  top:0;
-  padding:5px;
-  border-right: 1px solid #ffffff;
   width:5vw;
-  right:0;
-  padding-right: 2vw;
+ left:6%;
 }
 .menu_nakami1{
-  right:0;
+  right:17%;
   width: 5vw;
-  height:25vh;
-  top:55vh;
-  background-color: #000000;
-  color: #ffffff;
+  padding-right: 3%;
+  color: black;
   font-family:Arial, Helvetica, sans-serif;
   position:absolute;
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
+
 }
 .menu_nakami2{
-  right:0;
+  right:3%;
   width: 5vw;
-  height:20vh;
-  top:80vh;
-  background-color: #000000;
-  color: #ffffff;
+padding-right: 3%;
+  color: black;
   font-family:Arial, Helvetica, sans-serif;
   position:absolute;
-  border-right: 1px solid #ffffff;
-  border-top: 1px solid #ffffff;
 }
 .modal-midasi{
   padding:50%;
 }
-.touka_01{
-  /* ここモデルね */
-  width: 100vw;
-  height:100%;
-position: absolute;
-top:0;
-left:0;
-z-index: -4;
-pointer-events:none;
-}
-.touka_01_1{
-  width: 30vw;
-  height:100%;
-position: absolute;
-top:0;
-right:0;
-z-index: 4;
-pointer-events:none;
-}
-/* .touka_01_2{
-  width: 30vw;
-  height:100%;
-position: absolute;
-background-color: #000000;
-opacity: 0.5;
-top:0;
-right:0;
-z-index: 1;
-pointer-events:none;
-} */
+
+
+
 .touka_02{
   height:100%;
 position: absolute;
-top:55%;left:4vw;
+top:155%;left:4vw;
 font-family: Helvetica, sans-serif;
 font-size: 17px;
 z-index: 5;
@@ -369,7 +318,7 @@ text-shadow: 1px 1px 1px #000000;
 .touka_02_1{
   height:100%;
 position: absolute;
-top:60.5%;left:4vw;
+top:160.5%;left:4vw;
 font-family: Helvetica, sans-serif;
 font-size: 13px;
 z-index: 5;
@@ -377,8 +326,7 @@ color:white;
 line-height:200%;
 text-shadow: 1px 1px 1px #000000;
 }
-.pc { display: block !important; }
-.sp { display: none !important; }
+
  
 
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
@@ -399,33 +347,13 @@ text-shadow: 1px 1px 1px #000000;
   }
 
 
-  .pc { display: none !important; }
-  .sp { display: block !important; 
-    object-fit: cover!important;
-    object-position: 0 0!important;
-   width:100vw;
-}
 }
 
 
 @media screen and (max-width: 960px) {
-  .pc { display: block !important; 
-    object-fit: cover;
-    object-position: 50% 100%;
-    height:100%;
-   }
-   .sp { display: none!important; 
-
-}
 
 
-  .menu_nakami{display:none !important;
-  }
-  .menu_nakami1{display:none !important;
-  }
 
-  .menu_nakami2{display:none !important;
-  }
   .touka_01{
     width: 100vw;
     height:100%;
@@ -458,16 +386,6 @@ z-index: 5;
 color:white;
 line-height:200%;
 }
-#particles-js{ 
-  position:absolute;
-   width: 100%; height: 120%; 
-   background-image: url(""); 
-   background-repeat: no-repeat; 
-   background-size: cover; 
-   background-position: 50% 50%; 
-   z-index: 2;
-  }
-
 
 }
 
@@ -480,20 +398,8 @@ section:nth-child(2n){
   background:#000000; 
 }
 
-#footer{
-  background:#ff0000ba;
-
-}
-
-
 .onclick{
   cursor:pointer;
-}
-h4{
-  color:rgb(255, 148, 148);
-  font-size:1.5rem;
-  position:absolute;
-  top:229%;left:40%;
 }
 
 
@@ -520,28 +426,52 @@ h4{
   /* 二つ影があります。グリッチ表現にいいかも */
 }
 
-
-/* ---- particles.js container ---- */
- #particles-js{ 
-  position:absolute;
-   width: 100%; height: 120%; 
-   background-image: url(""); 
-   background-repeat: no-repeat; 
-   background-size: cover; 
-   background-position: 50% 50%; 
-   z-index: -3;
-  }
-
-
+.main1{
+  position: absolute;  
+  z-index: -1;background-color: #00ff66;
+  top:0;
+  height:88vh;
+  width:100vw;
+  left:0;
+}
 
 .syasenn1{
   position: absolute;  
-  z-index: 2;border: 1px solid #333333; background-color: #ffff99;top:140%;
-  height:100px;
-  width:95vw;
-  left:5vw;
-  right:0;
+  z-index: -1;background-color: #ffffff;top:0;
+  height:88vh;
+  width:100vw;
+  left:0;
 }
+.ground{
+  position: absolute;  
+  z-index: 1;
+bottom:0;
+  width:100vw;
+  left:0;
+}
+
+
+.main2{
+  position: absolute;  
+  z-index: -1;background-color: #ff0000;
+  top:95vh;
+  height:80vw;
+  width:100vw;
+  left:0;
+}
+.eizou{
+  position: absolute;  
+  border-radius: 20vw;
+  z-index: -1;background-color: #ffffff;top:0;
+  height:60%;
+  width:80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+  
+}
+
   .me{
     z-index: 7;
     position:absolute;
@@ -550,3 +480,15 @@ h4{
     top:150%;
     
     }
+  
+/* ---- particles.js container ---- */
+ #particles-js{ 
+  position:absolute;
+   width: 100%; height: 88%; 
+   background-image: url(""); 
+   background-repeat: no-repeat; 
+   background-size: cover; 
+   background-position: 50% 50%; 
+   z-index: 0;
+  }
+
