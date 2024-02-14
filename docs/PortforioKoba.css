@@ -327,6 +327,110 @@ line-height:200%;
 text-shadow: 1px 1px 1px #000000;
 }
 
+
+.dennnouzinnzya{
+  text-shadow: -4px -4px 1px #808080,4px 4px 1px #2e8b57
+  /* 二つ影があります。グリッチ表現にいいかも */
+}
+
+.main1{
+  position: absolute;  
+  z-index: -1;background-color: #00ff66;
+  top:0;
+  height:95vh;
+  width:100vw;
+  left:0;
+}
+
+.syasenn1{
+  position: absolute;  
+  z-index: -1;background-color: #ffffff;top:0;
+  height:95vh;
+  width:100vw;
+  left:0;
+}
+.ground{
+  position: absolute;  
+  z-index: 1;
+bottom:0;
+  width:100%;
+  left:0;
+}
+
+.poll1 {
+  position: absolute;
+  z-index: 1;
+  bottom: -1%;
+  width: 20%;
+  left: -3%;
+}
+
+
+.poll2{
+  position: absolute;  
+  z-index: 1;
+  bottom:5%;
+  width:8%;
+  left:12%;
+  opacity: 0.5;
+}
+.poll3{
+  position: absolute;  
+  z-index: 1;
+bottom:5%;
+  width:4%;
+  left:25%;
+  opacity: 0.7;
+}
+.poll4{
+  position: absolute;  
+  z-index: 1;
+  bottom:5%;
+  width:10%;
+  right:15%;
+}
+.poll5{
+  position: absolute;  
+  z-index: 1;
+  bottom:5%;
+  width:13%;
+  right:3%;
+  opacity: 0.6;
+}
+
+
+
+
+.main2{
+  position: absolute;  
+  z-index: -1;background-color: black;
+  top:95vh;
+  height:80vw;
+  width:100vw;
+  left:0;
+}
+.eizou{
+  position: absolute;  
+  border-radius: 20vw;
+  z-index: -1;background-color: #ffffff;top:0;
+  height:60%;
+  width:80%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform : translate(-50%,-50%);
+  transform : translate(-50%,-50%);
+  
+}
+
+  .me{
+    z-index: 7;
+    position:absolute;
+    width:25vw;
+    left:15%;
+    top:150%;
+    
+    }
+  
  
 
 /* スマートフォンで見たときは"sp"のclassがついた画像が表示される */
@@ -335,11 +439,11 @@ text-shadow: 1px 1px 1px #000000;
 
   model-viewer {
     width: 70vw;
-    height: 500px;
+    height: 80vh;
     z-index: 3;
    /* スマホで開いたらどうなるかチェック必須*/
    position:absolute;
-   top:0;
+   top:9vh;
    left:16%;
   }
   model-viewer#reveal {
@@ -352,7 +456,27 @@ text-shadow: 1px 1px 1px #000000;
 
 @media screen and (max-width: 960px) {
 
+  .poll1{
 
+
+    bottom: -5%;
+    width: 30%;
+    left: -3%;
+  }
+  .poll2{
+    bottom:2%;
+  }
+  .poll3{
+    bottom:2%;
+  }
+  .poll4{
+    bottom:2%;
+  }
+  .poll5{
+    bottom:2%;
+
+  }
+  
 
   .touka_01{
     width: 100vw;
@@ -421,66 +545,7 @@ section:nth-child(2n){
 }
 }
 
-.dennnouzinnzya{
-  text-shadow: -4px -4px 1px #808080,4px 4px 1px #2e8b57
-  /* 二つ影があります。グリッチ表現にいいかも */
-}
 
-.main1{
-  position: absolute;  
-  z-index: -1;background-color: #00ff66;
-  top:0;
-  height:88vh;
-  width:100vw;
-  left:0;
-}
-
-.syasenn1{
-  position: absolute;  
-  z-index: -1;background-color: #ffffff;top:0;
-  height:88vh;
-  width:100vw;
-  left:0;
-}
-.ground{
-  position: absolute;  
-  z-index: 1;
-bottom:0;
-  width:100vw;
-  left:0;
-}
-
-
-.main2{
-  position: absolute;  
-  z-index: -1;background-color: #ff0000;
-  top:95vh;
-  height:80vw;
-  width:100vw;
-  left:0;
-}
-.eizou{
-  position: absolute;  
-  border-radius: 20vw;
-  z-index: -1;background-color: #ffffff;top:0;
-  height:60%;
-  width:80%;
-  top: 50%;
-  left: 50%;
-  -webkit-transform : translate(-50%,-50%);
-  transform : translate(-50%,-50%);
-  
-}
-
-  .me{
-    z-index: 7;
-    position:absolute;
-    width:25vw;
-    left:15%;
-    top:150%;
-    
-    }
-  
 /* ---- particles.js container ---- */
  #particles-js{ 
   position:absolute;

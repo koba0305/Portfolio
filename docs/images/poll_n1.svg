@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_レイヤー_2" data-name="レイヤー 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.89 96.81">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+      }
+    </style>
+  </defs>
+  <g id="_レイヤー_1-2" data-name="レイヤー 1">
+    <g>
+      <polyline points=".02 0 2.24 6.9 6.67 6.9 8.89 0"/>
+      <line class="cls-1" x1="4.49" y1="95.4" x2="4.47" y2=".3"/>
+      <polyline points="7.67 49.87 6.08 46.9 2.88 46.9 1.28 49.85"/>
+      <rect x="2.98" y="53.7" width="3" height="41.61"/>
+      <polyline points="8.87 96.81 6.65 89.9 2.22 89.9 0 96.81"/>
+    </g>
+  </g>
+</svg>
